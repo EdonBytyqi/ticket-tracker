@@ -1,0 +1,26 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #1f2937;
+  color: #fff;
+}
+.brand {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  margin-right: auto;
+}
+.who {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+.topbar .link {
+  color: #fff;
+}
+main {
+  max-width: 60rem;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}

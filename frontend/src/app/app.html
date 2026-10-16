@@ -1,0 +1,10 @@
+<header class="topbar">
+  <a routerLink="/tickets" class="brand">Ticket-Tracker</a>
+  @if (auth.user(); as user) {
+    <span class="who">{{ user.email }} ({{ user.role }})</span>
+    <button type="button" class="link" (click)="auth.logout()">Abmelden</button>
+  }
+</header>
+<main>
+  <router-outlet />
+</main>
