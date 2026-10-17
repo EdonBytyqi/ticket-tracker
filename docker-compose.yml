@@ -24,6 +24,8 @@ services:
       JWT_SECRET: ${JWT_SECRET:?JWT_SECRET in .env setzen (siehe .env.example)}
       SEED_AGENT_EMAIL: ${SEED_AGENT_EMAIL:-agent@example.com}
       SEED_AGENT_PASSWORD: ${SEED_AGENT_PASSWORD:?SEED_AGENT_PASSWORD in .env setzen}
+      SEED_CUSTOMER_EMAIL: ${SEED_CUSTOMER_EMAIL:-kunde@example.com}
+      SEED_CUSTOMER_PASSWORD: ${SEED_CUSTOMER_PASSWORD:-}
     depends_on:
       db:
         condition: service_healthy

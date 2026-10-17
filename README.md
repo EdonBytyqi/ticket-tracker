@@ -61,7 +61,8 @@ cp .env.example .env
 docker compose up --build
 ```
 
-App: http://localhost:8080. Der Demo-Agent kommt aus `SEED_AGENT_EMAIL` und `SEED_AGENT_PASSWORD`.
+App: http://localhost:8080. Der Demo-Agent kommt aus `SEED_AGENT_EMAIL` und `SEED_AGENT_PASSWORD`,
+der optionale Demo-Kunde aus `SEED_CUSTOMER_EMAIL` und `SEED_CUSTOMER_PASSWORD`.
 
 ### Lokal entwickeln
 
@@ -73,7 +74,8 @@ docker run --name tickets-db -e POSTGRES_USER=tickets -e POSTGRES_PASSWORD=ticke
 # 2. Backend
 cd backend
 npm install
-SEED_AGENT_EMAIL=agent@example.com SEED_AGENT_PASSWORD=agentpass123 npm run start:dev
+SEED_AGENT_EMAIL=agent@example.com SEED_AGENT_PASSWORD=agentpass123 \
+  SEED_CUSTOMER_EMAIL=kunde@example.com SEED_CUSTOMER_PASSWORD=kundepass123 npm run start:dev
 # Beim Start werden die Migrationen automatisch ausgefuehrt.
 
 # 3. Frontend (anderes Terminal, Proxy leitet /api an Port 3000)

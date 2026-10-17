@@ -14,14 +14,19 @@ export class UsersService implements OnModuleInit {
     private readonly config: ConfigService,
   ) {}
 
-  /** Legt optional einen Demo-Agenten an (Zugangsdaten nur aus Umgebungsvariablen). */
+  /** Legt optional einen Demo-Agenten und einen Demo-Kunden an (Zugangsdaten nur aus Umgebungsvariablen). */
   async onModuleInit() {
-    const email = this.config.get<string>('SEED_AGENT_EMAIL');
-    const password = this.config.get<string>('SEED_AGENT_PASSWORD');
+    await this.seed('SEED_AGENT', Role.Agent);
+    await this.seed('SEED_CUSTOMER', Role.Customer);
+  }
+
+  private async seed(prefix: string, role: Role) {
+    const email = this.config.get<string>(`${prefix}_EMAIL`);
+    const password = this.config.get<string>(`${prefix}_PASSWORD`);
     if (!email || !password) return;
     if (await this.findByEmail(email)) return;
-    await this.create(email, password, Role.Agent);
-    this.logger.log(`Demo-Agent ${email} angelegt`);
+    await this.create(email, password, role);
+    this.logger.log(`Demo-Benutzer ${email} (${role}) angelegt`);
   }
 
   async create(email: string, password: string, role: Role = Role.Customer): Promise<User> {
