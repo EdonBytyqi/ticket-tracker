@@ -36,7 +36,7 @@ export interface AgentUpdate {
       </label>
       <div class="row">
         <button type="submit" [disabled]="busy()">Speichern</button>
-        <button type="button" class="danger" (click)="remove.emit()" [disabled]="busy()">Loeschen</button>
+        <button type="button" class="danger" (click)="remove.emit()" [disabled]="busy()">Löschen</button>
       </div>
     </form>
   `,

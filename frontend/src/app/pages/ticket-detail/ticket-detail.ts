@@ -85,13 +85,13 @@ export class TicketDetailPage implements OnInit {
   }
 
   remove(id: string) {
-    if (!confirm('Ticket wirklich loeschen?')) return;
+    if (!confirm('Ticket wirklich löschen?')) return;
     this.busy.set(true);
     this.api.remove(id).subscribe({
       next: () => void this.router.navigate(['/tickets']),
       error: () => {
         this.busy.set(false);
-        this.error.set('Loeschen fehlgeschlagen.');
+        this.error.set('Löschen fehlgeschlagen.');
       },
     });
   }
