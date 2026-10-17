@@ -24,6 +24,11 @@ Gebaut als Lern- und Portfolio-Projekt mit TypeScript, Angular, NestJS und Postg
 - Rate Limiting: Login und Registrierung max. 5 Anfragen pro Minute und IP, sonst 100.
 - `GET /api/health` prueft App und Datenbank (200 oder 503) fuer Docker und Monitoring.
 
+## Vorgehen: Spec-driven
+
+Features werden zuerst als Spec beschrieben (Anforderungen mit pruefbaren Akzeptanzkriterien, Entwurf, Aufgaben),
+dann umgesetzt. Jedes Akzeptanzkriterium verweist auf den Test, der es nachweist. Siehe [`specs/`](specs/README.md).
+
 ## Architektur
 
 ```
