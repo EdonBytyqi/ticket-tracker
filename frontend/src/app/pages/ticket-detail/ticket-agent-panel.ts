@@ -27,7 +27,7 @@ export interface AgentUpdate {
         </select>
       </label>
       <label>
-        Prioritaet
+        Priorität
         <select formControlName="priority">
           <option value="low">Niedrig</option>
           <option value="medium">Mittel</option>

@@ -23,7 +23,7 @@ import { TicketsService } from '../core/tickets.service';
           <textarea rows="6" formControlName="description"></textarea>
         </label>
         <label>
-          Prioritaet
+          Priorität
           <select formControlName="priority">
             <option value="low">Niedrig</option>
             <option value="medium">Mittel</option>

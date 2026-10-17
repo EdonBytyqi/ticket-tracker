@@ -16,7 +16,7 @@ import { TicketContentForm } from './ticket-content-form';
   imports: [RouterLink, DatePipe, TicketAgentPanel, TicketContentForm],
   template: `
     <section class="card narrow">
-      <a routerLink="/tickets">&larr; Zurueck</a>
+      <a routerLink="/tickets">&larr; Zurück</a>
       @if (error()) {
         <p class="error" role="alert">{{ error() }}</p>
       }
@@ -24,7 +24,7 @@ import { TicketContentForm } from './ticket-content-form';
         <h1>{{ t.title }}</h1>
         <p>
           <span class="badge" [class]="'status-' + t.status">{{ t.status }}</span>
-          Prioritaet: {{ t.priority }} &middot; erstellt {{ t.createdAt | date: 'dd.MM.yyyy HH:mm' }}
+          Priorität: {{ t.priority }} &middot; erstellt {{ t.createdAt | date: 'dd.MM.yyyy HH:mm' }}
           @if (t.createdBy) { &middot; von {{ t.createdBy.email }} }
         </p>
 

@@ -36,7 +36,7 @@ import { TicketsService } from '../core/tickets.service';
       } @else {
         <table>
           <thead>
-            <tr><th>Titel</th><th>Status</th><th>Prioritaet</th><th>Erstellt</th></tr>
+            <tr><th>Titel</th><th>Status</th><th>Priorität</th><th>Erstellt</th></tr>
           </thead>
           <tbody>
             @for (t of tickets(); track t.id) {
@@ -50,7 +50,7 @@ import { TicketsService } from '../core/tickets.service';
           </tbody>
         </table>
         <footer class="row">
-          <button type="button" (click)="page.set(page() - 1)" [disabled]="page() <= 1">Zurueck</button>
+          <button type="button" (click)="page.set(page() - 1)" [disabled]="page() <= 1">Zurück</button>
           <span>Seite {{ page() }} von {{ totalPages() }} ({{ total() }} Tickets)</span>
           <button type="button" (click)="page.set(page() + 1)" [disabled]="page() >= totalPages()">Weiter</button>
         </footer>
