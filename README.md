@@ -168,3 +168,8 @@ Erledigt: Migrationen, E2E-Tests mit Supertest, Rate Limiting, Pruefung der Zuwe
 - Das Rate Limiting zaehlt im Speicher einer Instanz. Bei mehreren Instanzen braeuchte es einen
   gemeinsamen Speicher (z. B. Redis).
 - Der Token-Ablauf ist fest auf eine Stunde gesetzt, es gibt keinen Refresh-Token.
+
+## Arbeiten mit KI
+
+Wie ich bei diesem Projekt sicher und verantwortungsvoll mit KI-Assistenten arbeite: [AI_GUIDE.md](AI_GUIDE.md) (Englisch).
+Kurz gesagt: *AI delivers the code, I take the accountability.*
